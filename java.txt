@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class java{
+    public static void main(String args[]){
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        printprimes(n);
+    }
+
+    public static void printprimes(int n){
+        if(n == 0){
+            retrun;
+        }
+        printprimes(n-1);
+        if(prime(n) == true){
+         System.out.println(n);
+        }
+    }
+    
+    public static boolean prime(int n){
+        boolean b = true;
+        for(int div =2 ;div*div<=n;div++){
+           if(n % 2 == 0){
+               return false;
+               break;
+           }
+        }
+        return b;
+
+    }
+
+
+}
